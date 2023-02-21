@@ -8,17 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		0EEF32E229A52B4000134AEC /* UnderControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32E129A52B4000134AEC /* UnderControlApp.swift */; };
-		0EEF32E429A52B4000134AEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32E329A52B4000134AEC /* ContentView.swift */; };
+		0EEF32E429A52B4000134AEC /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32E329A52B4000134AEC /* MainScreenView.swift */; };
 		0EEF32E629A52B4100134AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEF32E529A52B4100134AEC /* Assets.xcassets */; };
 		0EEF32E929A52B4100134AEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EEF32E829A52B4100134AEC /* Preview Assets.xcassets */; };
+		0EEF32F129A52BEA00134AEC /* OperationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32F029A52BEA00134AEC /* OperationModel.swift */; };
+		0EEF32F729A52DB400134AEC /* MainWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32F629A52DB400134AEC /* MainWidgetView.swift */; };
+		0EEF32FA29A530D200134AEC /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32F929A530D200134AEC /* TopBarView.swift */; };
+		0EEF32FD29A53E7F00134AEC /* MainOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32FC29A53E7F00134AEC /* MainOperationCell.swift */; };
+		0EEF32FF29A5432200134AEC /* HeaderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32FE29A5432200134AEC /* HeaderListView.swift */; };
+		0EEF330129A5460200134AEC /* MainDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF330029A5460200134AEC /* MainDetailedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EEF32DE29A52B4000134AEC /* UnderControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EEF32E129A52B4000134AEC /* UnderControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderControlApp.swift; sourceTree = "<group>"; };
-		0EEF32E329A52B4000134AEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0EEF32E329A52B4000134AEC /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		0EEF32E529A52B4100134AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EEF32E829A52B4100134AEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0EEF32F029A52BEA00134AEC /* OperationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationModel.swift; sourceTree = "<group>"; };
+		0EEF32F629A52DB400134AEC /* MainWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWidgetView.swift; sourceTree = "<group>"; };
+		0EEF32F929A530D200134AEC /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		0EEF32FC29A53E7F00134AEC /* MainOperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOperationCell.swift; sourceTree = "<group>"; };
+		0EEF32FE29A5432200134AEC /* HeaderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderListView.swift; sourceTree = "<group>"; };
+		0EEF330029A5460200134AEC /* MainDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailedView.swift; sourceTree = "<group>"; };
+		0EEF330229A5503B00134AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +64,10 @@
 		0EEF32E029A52B4000134AEC /* UnderControl */ = {
 			isa = PBXGroup;
 			children = (
-				0EEF32E129A52B4000134AEC /* UnderControlApp.swift */,
-				0EEF32E329A52B4000134AEC /* ContentView.swift */,
-				0EEF32E529A52B4100134AEC /* Assets.xcassets */,
-				0EEF32E729A52B4100134AEC /* Preview Content */,
+				0EEF32F329A52CFA00134AEC /* Application */,
+				0EEF32EF29A52B6B00134AEC /* Models */,
+				0EEF32F229A52CD400134AEC /* Views */,
+				0EEF32F529A52D3900134AEC /* Resources */,
 			);
 			path = UnderControl;
 			sourceTree = "<group>";
@@ -65,6 +78,69 @@
 				0EEF32E829A52B4100134AEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0EEF32EF29A52B6B00134AEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32F029A52BEA00134AEC /* OperationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0EEF32F229A52CD400134AEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32F429A52D2500134AEC /* MainViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0EEF32F329A52CFA00134AEC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32E129A52B4000134AEC /* UnderControlApp.swift */,
+				0EEF330229A5503B00134AEC /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0EEF32F429A52D2500134AEC /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32FB29A53E7000134AEC /* Cells */,
+				0EEF32F829A52DB800134AEC /* UIElements */,
+				0EEF32E329A52B4000134AEC /* MainScreenView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		0EEF32F529A52D3900134AEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32E529A52B4100134AEC /* Assets.xcassets */,
+				0EEF32E729A52B4100134AEC /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0EEF32F829A52DB800134AEC /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32F929A530D200134AEC /* TopBarView.swift */,
+				0EEF32F629A52DB400134AEC /* MainWidgetView.swift */,
+				0EEF32FE29A5432200134AEC /* HeaderListView.swift */,
+				0EEF330029A5460200134AEC /* MainDetailedView.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		0EEF32FB29A53E7000134AEC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF32FC29A53E7F00134AEC /* MainOperationCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EEF32E429A52B4000134AEC /* ContentView.swift in Sources */,
+				0EEF32FA29A530D200134AEC /* TopBarView.swift in Sources */,
+				0EEF32F129A52BEA00134AEC /* OperationModel.swift in Sources */,
+				0EEF32E429A52B4000134AEC /* MainScreenView.swift in Sources */,
 				0EEF32E229A52B4000134AEC /* UnderControlApp.swift in Sources */,
+				0EEF32FD29A53E7F00134AEC /* MainOperationCell.swift in Sources */,
+				0EEF330129A5460200134AEC /* MainDetailedView.swift in Sources */,
+				0EEF32FF29A5432200134AEC /* HeaderListView.swift in Sources */,
+				0EEF32F729A52DB400134AEC /* MainWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,15 +348,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"UnderControl/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UnderControl/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 66STM82H6X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = UnderControl/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,15 +378,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"UnderControl/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UnderControl/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 66STM82H6X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = UnderControl/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
