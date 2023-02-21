@@ -57,7 +57,7 @@ struct MainWidgetView: View {
     
     // Прогресс бар
     private func progressBar() -> some View {
-        Capsule()
+        RoundedRectangle(cornerRadius: 10)
             .frame(maxWidth: .infinity)
             .frame(height: 16)
     }

@@ -12,12 +12,13 @@ struct OperationModel: Identifiable {
     var type: OperationType
     var category: CategoryModel
     var amount: Float
+    var description: String?
     var date: Date
 }
 
 enum OperationType: String {
-    case minus = "expense"
-    case plus = "profit"
+    case minus = "Расход"
+    case plus = "Доход"
 }
 
 struct CategoryModel: Identifiable {

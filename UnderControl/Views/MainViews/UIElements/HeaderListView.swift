@@ -11,15 +11,20 @@ struct HeaderListView: View {
     
     // MARK: - Свойства
     let text: String
+    let array: [OperationModel]
     
     // MARK: - ТЕЛО
     var body: some View {
         HStack {
             // Название
             Text(text)
+            
             Spacer()
+            
             // Сумма
-            Text("1 000 000₽")
+            if let amount = array.reduce(0, { $0 + $1.amount }) {
+                Text(amount.formattedWithSeparator + "₽")
+            }
         }
         .foregroundColor(.gray)
     }
@@ -28,7 +33,7 @@ struct HeaderListView: View {
 // MARK: - ПРЕДВАРИТЕЛЬНЫЙ ПРОСМОТР
 struct HeaderListView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderListView(text: "Расходы")
+        HeaderListView(text: "Расходы", array: [OperationModel(type: .minus, category: CategoryModel(title: "", image: ""), amount: 240, date: Date())])
             .previewLayout(.sizeThatFits)
     }
 }

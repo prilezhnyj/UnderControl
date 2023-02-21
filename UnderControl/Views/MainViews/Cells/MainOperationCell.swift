@@ -9,21 +9,25 @@ import SwiftUI
 
 struct MainOperationCell: View {
     
+    // MARK: - Свойства
+    let operation: OperationModel
+    
     // MARK: - ТЕЛО
     var body: some View {
         HStack(spacing: 16) {
             // Иконка
-            Text("🥬")
+            Text(operation.category.image)
                 .frame(width: 40, height: 40, alignment: .center)
                 .background(Color.black.opacity(0.05))
-                .clipShape(Circle())
+//                .clipShape(Circle())
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             // Текст и категория
             VStack(alignment: .leading) {
-                Text("Продукты")
+                Text(operation.category.title)
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                 
-                Text("Расход")
+                Text(operation.type.rawValue)
                     .font(.system(size: 14, weight: .regular, design: .default))
                     .foregroundColor(.gray)
             }
@@ -31,9 +35,9 @@ struct MainOperationCell: View {
             Spacer()
             
             // Цена
-            Text("- 1 000 000₽")
+            Text(operation.type == .minus ? "-\(operation.amount.formattedWithSeparator)₽" : "+\(operation.amount.formattedWithSeparator)₽")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
-                .foregroundColor(.red)
+                .foregroundColor(operation.type == .minus ? .red : .green)
         }
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -43,7 +47,7 @@ struct MainOperationCell: View {
 // MARK: - ПРЕДВАРИТЕЛЬНЫЙ ПРОСМОТР
 struct MainOperationCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainOperationCell()
+        MainOperationCell(operation: OperationModel(type: .minus, category: CategoryModel(title: "Транспорт", image: "🚌"), amount: 341, date: Date()))
             .previewLayout(.sizeThatFits)
     }
 }

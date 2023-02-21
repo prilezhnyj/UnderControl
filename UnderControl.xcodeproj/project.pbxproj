@@ -17,6 +17,8 @@
 		0EEF32FD29A53E7F00134AEC /* MainOperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32FC29A53E7F00134AEC /* MainOperationCell.swift */; };
 		0EEF32FF29A5432200134AEC /* HeaderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF32FE29A5432200134AEC /* HeaderListView.swift */; };
 		0EEF330129A5460200134AEC /* MainDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF330029A5460200134AEC /* MainDetailedView.swift */; };
+		0EEF330529A5554D00134AEC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF330429A5554D00134AEC /* MainViewModel.swift */; };
+		0EEF330829A5588000134AEC /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEF330729A5588000134AEC /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0EEF32FE29A5432200134AEC /* HeaderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderListView.swift; sourceTree = "<group>"; };
 		0EEF330029A5460200134AEC /* MainDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailedView.swift; sourceTree = "<group>"; };
 		0EEF330229A5503B00134AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EEF330429A5554D00134AEC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0EEF330729A5588000134AEC /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,11 @@
 		0EEF32E029A52B4000134AEC /* UnderControl */ = {
 			isa = PBXGroup;
 			children = (
+				0EEF330629A5586F00134AEC /* Extensions */,
 				0EEF32F329A52CFA00134AEC /* Application */,
 				0EEF32EF29A52B6B00134AEC /* Models */,
 				0EEF32F229A52CD400134AEC /* Views */,
+				0EEF330329A5553B00134AEC /* ViewModels */,
 				0EEF32F529A52D3900134AEC /* Resources */,
 			);
 			path = UnderControl;
@@ -143,6 +149,22 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0EEF330329A5553B00134AEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF330429A5554D00134AEC /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0EEF330629A5586F00134AEC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0EEF330729A5588000134AEC /* Formatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EEF32FA29A530D200134AEC /* TopBarView.swift in Sources */,
+				0EEF330529A5554D00134AEC /* MainViewModel.swift in Sources */,
+				0EEF330829A5588000134AEC /* Formatter.swift in Sources */,
 				0EEF32F129A52BEA00134AEC /* OperationModel.swift in Sources */,
 				0EEF32E429A52B4000134AEC /* MainScreenView.swift in Sources */,
 				0EEF32E229A52B4000134AEC /* UnderControlApp.swift in Sources */,
