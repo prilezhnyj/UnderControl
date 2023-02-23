@@ -16,13 +16,14 @@ struct OperationModel: Identifiable {
     var date: Date
 }
 
-enum OperationType: String {
+enum OperationType: String, Hashable {
     case minus = "Расход"
     case plus = "Доход"
 }
 
 struct CategoryModel: Identifiable {
     var id = UUID().uuidString
+    var type: OperationType
     var title: String
     var image: String
 }

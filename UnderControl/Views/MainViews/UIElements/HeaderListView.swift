@@ -33,7 +33,7 @@ struct HeaderListView: View {
 // MARK: - ПРЕДВАРИТЕЛЬНЫЙ ПРОСМОТР
 struct HeaderListView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderListView(text: "Расходы", array: [OperationModel(type: .minus, category: CategoryModel(title: "", image: ""), amount: 240, date: Date())])
+        HeaderListView(text: "", array: [OperationModel(type: .minus, category: CategoryModel(type: .minus, title: "", image: ""), amount: 1, date: Date())])
             .previewLayout(.sizeThatFits)
     }
 }

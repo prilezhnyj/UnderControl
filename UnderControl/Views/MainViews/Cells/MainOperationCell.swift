@@ -47,7 +47,7 @@ struct MainOperationCell: View {
 // MARK: - ПРЕДВАРИТЕЛЬНЫЙ ПРОСМОТР
 struct MainOperationCell_Previews: PreviewProvider {
     static var previews: some View {
-        MainOperationCell(operation: OperationModel(type: .minus, category: CategoryModel(title: "Транспорт", image: "🚌"), amount: 341, date: Date()))
+        MainOperationCell(operation: OperationModel(type: .minus, category: CategoryModel(type: .minus, title: "", image: ""), amount: 1, date: Date()))
             .previewLayout(.sizeThatFits)
     }
 }

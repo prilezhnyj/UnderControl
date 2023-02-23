@@ -86,7 +86,6 @@ struct MainDetailedView: View {
             }
         }
         .padding(16)
-        .padding(.bottom)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: -10)

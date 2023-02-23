@@ -11,7 +11,9 @@ import SwiftUI
 struct UnderControlApp: App {
     var body: some Scene {
         WindowGroup {
-            MainScreenView()
+            NavigationView {
+                MainScreenView()
+            }
         }
     }
 }
